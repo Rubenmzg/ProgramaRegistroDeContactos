@@ -20,30 +20,58 @@
             android:text="Nombre"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#212121"/>
-
-        <TextView
-            android:id="@+id/tvTelefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telefono: "
-            android:textSize="14sp"
-            android:textColor="#757575"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/tvCelular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Celular: "
-            android:textSize="14sp"
-            android:textColor="#757575"/>
+            android:textColor="#212121"
+            android:layout_marginBottom="8dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefono: "
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvOficina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oficina: "
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvCelular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celular: "
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo: "
+                android:textSize="14sp"
+                android:textColor="#424242"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnEditar"

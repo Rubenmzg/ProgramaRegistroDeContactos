@@ -1,6 +1,7 @@
 package com.example.programaregistrodecontactos;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -59,34 +60,17 @@ public class ListaContactosActivity extends AppCompatActivity implements Contact
 
     @Override
     public void onEditarClick(Contacto contacto) {
-        mostrarDialogoEditar(contacto);
-    }
-
-    private void mostrarDialogoEditar(Contacto contacto) {
-        new AlertDialog.Builder(this)
-                .setTitle("Informacion del Contacto")
-                .setMessage(
-                        "Nombre: " + contacto.getNombre() + "\n" +
-                                "Telefono: " + (contacto.getTelefono() != null ? contacto.getTelefono() : "No disponible") + "\n" +
-                                "Oficina: " + (contacto.getOficina() != null ? contacto.getOficina() : "No disponible") + "\n" +
-                                "Celular: " + (contacto.getCelular() != null ? contacto.getCelular() : "No disponible") + "\n" +
-                                "Correo: " + (contacto.getCorreo() != null ? contacto.getCorreo() : "No disponible")
-                )
-                .setPositiveButton("OK", null)
-                .show();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("contacto_id", contacto.getId());
+        startActivity(intent);
     }
 
     @Override
     public void onEliminarClick(Contacto contacto) {
-        new AlertDialog.Builder(this)
-                .setTitle("Eliminar Contacto")
-                .setMessage("Estas seguro de eliminar a " + contacto.getNombre() + "?")
-                .setPositiveButton("Eliminar", (d, w) -> {
-                    contactoDAO.eliminarContacto(contacto.getId());
-                    cargarContactos();
-                })
-                .setNegativeButton("Cancelar", null)
-                .show();
+
+        contactoDAO.eliminarContacto(contacto.getId());
+        cargarContactos();
+
     }
 
     @Override

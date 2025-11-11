@@ -38,7 +38,9 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.Contac
 
         holder.tvNombre.setText(contacto.getNombre());
         holder.tvTelefono.setText("Telefono: " + (contacto.getTelefono() != null && !contacto.getTelefono().isEmpty() ? contacto.getTelefono() : "No disponible"));
+        holder.tvOficina.setText("Oficina: " + (contacto.getOficina() != null && !contacto.getOficina().isEmpty() ? contacto.getOficina() : "No disponible"));
         holder.tvCelular.setText("Celular: " + (contacto.getCelular() != null && !contacto.getCelular().isEmpty() ? contacto.getCelular() : "No disponible"));
+        holder.tvCorreo.setText("Correo: " + (contacto.getCorreo() != null && !contacto.getCorreo().isEmpty() ? contacto.getCorreo() : "No disponible"));
 
         holder.btnEditar.setOnClickListener(v -> {
             if (listener != null) {
@@ -64,14 +66,16 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.Contac
     }
 
     static class ContactoViewHolder extends RecyclerView.ViewHolder {
-        TextView tvNombre, tvTelefono, tvCelular;
+        TextView tvNombre, tvTelefono, tvOficina, tvCelular, tvCorreo;
         Button btnEditar, btnEliminar;
 
         public ContactoViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNombre = itemView.findViewById(R.id.tvNombre);
             tvTelefono = itemView.findViewById(R.id.tvTelefono);
+            tvOficina = itemView.findViewById(R.id.tvOficina);
             tvCelular = itemView.findViewById(R.id.tvCelular);
+            tvCorreo = itemView.findViewById(R.id.tvCorreo);
             btnEditar = itemView.findViewById(R.id.btnEditar);
             btnEliminar = itemView.findViewById(R.id.btnEliminar);
         }
