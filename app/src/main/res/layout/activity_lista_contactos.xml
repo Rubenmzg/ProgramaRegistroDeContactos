@@ -1,53 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#2196F3"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:elevation="4dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contactos Guardados"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"/>
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerContactos"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp"/>
+        android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/tvVacio"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="No hay contactos guardados"
-        android:textSize="18sp"
-        android:textColor="#757575"
-        android:gravity="center"
-        android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/layoutContactos"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
 
     <Button
         android:id="@+id/btnVolver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="VOLVER"
-        android:textSize="16sp"
-        android:backgroundTint="#2196F3"
-        android:layout_margin="16dp"/>
+        android:layout_marginTop="12dp" />
 
 </LinearLayout>

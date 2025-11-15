@@ -1,97 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    android:padding="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:layout_margin="2dp">
 
         <TextView
             android:id="@+id/tvNombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textSize="20sp"
+            android:text="Nombre: A"
             android:textStyle="bold"
-            android:textColor="#212121"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="16sp"
+            android:textColor="#212121" />
 
+        <TextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono: 1"
+            android:textSize="13sp"
+            android:textColor="#424242"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvOficina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oficina: 1"
+            android:textSize="13sp"
+            android:textColor="#424242"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celular: 1"
+            android:textSize="13sp"
+            android:textColor="#424242"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo: correo@ejemplo.com"
+            android:textSize="13sp"
+            android:textColor="#424242"
+            android:layout_marginTop="2dp" />
+
+        <!-- Botones en una sola fila -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#F5F5F5"
-            android:padding="12dp"
-            android:layout_marginBottom="12dp">
-
-            <TextView
-                android:id="@+id/tvTelefono"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Telefono: "
-                android:textSize="14sp"
-                android:textColor="#424242"
-                android:layout_marginBottom="4dp"/>
-
-            <TextView
-                android:id="@+id/tvOficina"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Oficina: "
-                android:textSize="14sp"
-                android:textColor="#424242"
-                android:layout_marginBottom="4dp"/>
-
-            <TextView
-                android:id="@+id/tvCelular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Celular: "
-                android:textSize="14sp"
-                android:textColor="#424242"
-                android:layout_marginBottom="4dp"/>
-
-            <TextView
-                android:id="@+id/tvCorreo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Correo: "
-                android:textSize="14sp"
-                android:textColor="#424242"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="6dp">
 
             <Button
                 android:id="@+id/btnEditar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="EDITAR"
-                android:backgroundTint="#2196F3"
-                android:layout_marginEnd="8dp"/>
+                android:text="Editar"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
 
             <Button
                 android:id="@+id/btnEliminar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ELIMINAR"
-                android:backgroundTint="#F44336"/>
-
+                android:text="Eliminar"
+                android:textAllCaps="false"
+                android:textSize="10sp"
+                android:backgroundTint="#FF0000" />
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</LinearLayout>
+
